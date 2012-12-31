@@ -1,0 +1,9 @@
+#!/bin/bash
+case $1 in
+    resume)
+        echo 23 21 19 > /sys/devices/system/cpu/cpu0/cpufreq/phc_vids
+        echo 23 21 19 > /sys/devices/system/cpu/cpu1/cpufreq/phc_vids
+        ;;
+    *)  echo "do nothing."
+        ;;
+esac
